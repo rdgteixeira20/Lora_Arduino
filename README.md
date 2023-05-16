@@ -55,7 +55,7 @@ Código Receptor
 #include <SoftwareSerial.h>
  
 int led = 13;  
- 
+int led2 = 9; 
 SoftwareSerial loraSerial(2, 1); // TX, RX
  
 void setup() {
@@ -70,8 +70,10 @@ void loop() {
   if(input == message){
        Serial.println(input);  
        digitalWrite(13, HIGH);
+       digitalWrite(9, HIGH);
   }else{
       digitalWrite(led, LOW);
+      digitalWrite(led2, LOW);
     
   }
   delay(20);
